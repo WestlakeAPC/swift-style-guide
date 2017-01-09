@@ -47,6 +47,7 @@ Our overarching goals are clarity, consistency and brevity, in that order.
 * [Organization and Bundle Identifier](#organization-and-bundle-identifier)
 * [Copyright Statement](#copyright-statement)
 * [Smiley Face](#smiley-face)
+* [Attributions](#attributions)
 * [References](#references)
 
 
