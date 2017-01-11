@@ -1,9 +1,14 @@
 ## Credits
 
-[Ray Fix](https://github.com/rayfix) currently maintains this style guide.
-It is a collaborative effort from the most stylish raywenderlich.com team members and its community: 
+[Eli Bradley](https://github.com/EtherTyper) currently maintains this style guide.
+It is adapted from the hard work of the raywenderlich.com community.
 
-* [Jawwad Ahmad](https://github.com/jawwad)
+The following is the original credits section:
+
+> [Ray Fix](https://github.com/rayfix) currently maintains this style guide.
+It is a collaborative effort from the most stylish raywenderlich.com team members and its community: 
+> 
+> * [Jawwad Ahmad](https://github.com/jawwad)
 * [Soheil Moayedi Azarpour](https://github.com/moayes)
 * [Scott Berrevoets](https://github.com/Scott90)
 * [Jessy Catterwaul](https://github.com/JessyCatterwaul)
@@ -30,5 +35,5 @@ It is a collaborative effort from the most stylish raywenderlich.com team member
 * [Chris Wagner](https://github.com/cwagdev)
 * [Ray Wenderlich](https://github.com/rwenderlich)
 * [Jack Wu](https://github.com/jackwu95)
-
-Hat tip to [Nicholas Waynik](https://github.com/ndubbs) and the [Objective-C Style Guide](https://github.com/raywenderlich/objective-c-style-guide) team!
+> 
+> Hat tip to [Nicholas Waynik](https://github.com/ndubbs) and the [Objective-C Style Guide](https://github.com/raywenderlich/objective-c-style-guide) team!
