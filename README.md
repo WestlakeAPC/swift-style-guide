@@ -258,12 +258,24 @@ Keep imports minimal. For example, don't import `UIKit` when importing `Foundati
 * Method braces and other braces (`if`/`else`/`switch`/`while` etc.) always open on the same line as the statement but close on a new line.
 * Tip: You can re-indent by selecting some code (or ⌘A to select all) and then Control-I (or Editor\Structure\Re-Indent in the menu). Some of the Xcode template code will have 4-space tabs hard coded, so this is a good way to fix that.
 
+* Always treat `case` clauses as individual statements, and indent them relative to their respective `switch` statements.
+
+
 **Preferred:**
 ```swift
 if user.isHappy {
   // Do something
 } else {
   // Do something else
+}
+
+switch user.emotion {
+  case .happy:
+    // Do something
+  case .angry:
+    // Do something else
+  default:
+    // Fallback case
 }
 ```
 
@@ -275,6 +287,16 @@ if user.isHappy
 }
 else {
   // Do something else
+}
+
+switch user.emotion
+{
+case .happy:
+  // Do something
+case .angry:
+  // Do something else
+default:
+  // Fallback case
 }
 ```
 
