@@ -260,7 +260,6 @@ Keep imports minimal. For example, don't import `UIKit` when importing `Foundati
 
 * Always treat `case` clauses as individual statements, and indent them relative to their respective `switch` statements.
 
-
 **Preferred:**
 ```swift
 if user.isHappy {
