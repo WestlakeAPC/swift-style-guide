@@ -951,6 +951,8 @@ file:
      */
 ```
 
+While the projects are Apache 2.0 licensed, we add simplistic MIT license file headers to make it easier to copy snippets of code into your own projects.
+
 ## Smiley Face
 
 Smiley faces and emoticons are a very prominent style feature of our code and culture! It is very important to have the correct smile signifying the immense amount of happiness and excitement for the coding topic. The closing square bracket `]` is used because it represents the largest smile able to be captured using ASCII art. A closing parenthesis `)` creates a half-hearted smile, and thus is not preferred.
