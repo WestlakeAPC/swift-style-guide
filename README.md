@@ -11,7 +11,7 @@ Our overarching goals are clarity, consistency and brevity, in that order.
 * [Naming](#naming)
   * [Prose](#prose)
   * [Delegates](#delegates)
-  * [Use Type Inferred Context](#use-type-inferred-context)  
+  * [Use Type Inferred Context](#use-type-inferred-context)
   * [Generics](#generics)
   * [Class Prefixes](#class-prefixes)
   * [Language](#language)
@@ -70,7 +70,7 @@ Descriptive and consistent naming makes software easier to read and understand. 
 - beginning factory methods with `make`
 - naming methods for their side effects
   - verb methods follow the -ed, -ing rule for the non-mutating version
-  - noun methods follow the formX rule for the non-mutating version
+  - noun methods follow the formX rule for the mutating version
   - boolean types should read like assertions
   - protocols that describe _what something is_ should read as nouns
   - protocols that describe _a capability_ should end in _-able_ or _-ible_
@@ -184,7 +184,7 @@ Use extensions to organize your code into logical blocks of functionality. Each 
 
 ### Protocol Conformance
 
- In particular, when adding protocol conformance to a model, prefer adding a separate extension for the protocol methods. This keeps the related methods grouped together with the protocol and can simplify instructions to add a protocol to a class with its associated methods.
+In particular, when adding protocol conformance to a model, prefer adding a separate extension for the protocol methods. This keeps the related methods grouped together with the protocol and can simplify instructions to add a protocol to a class with its associated methods.
 
 **Preferred:**
 ```swift
@@ -253,8 +253,8 @@ Keep imports minimal. For example, don't import `UIKit` when importing `Foundati
 
 * Indent using 2 spaces rather than tabs to conserve space and help prevent line wrapping. Be sure to set this preference in Xcode and in the Project settings as shown below:
 
-  ![Xcode indent settings](screens/indentation.png)
-  
+![Xcode indent settings](screens/indentation.png)
+
 * Method braces and other braces (`if`/`else`/`switch`/`while` etc.) always open on the same line as the statement but close on a new line.
 * Tip: You can re-indent by selecting some code (or ⌘A to select all) and then Control-I (or Editor\Structure\Re-Indent in the menu). Some of the Xcode template code will have 4-space tabs hard coded, so this is a good way to fix that.
 
@@ -301,7 +301,7 @@ default:
 
 * There should be exactly one blank line between methods to aid in visual clarity and organization. Whitespace within methods should separate functionality, but having too many sections in a method often means you should refactor into several methods.
 
-* Colons always have no space on the left and one space on the right. Exceptions are the ternary operator `? :`, empty dictionary `[:]` and  `#selector` syntax for unnamed parameters `(_:)`.
+* Colons always have no space on the left and one space on the right. Exceptions are the ternary operator `? :`, empty dictionary `[:]` and `#selector` syntax for unnamed parameters `(_:)`.
 
 **Preferred:**
 ```swift
@@ -425,7 +425,7 @@ Marking classes or members as `final` in educational projects can distract from 
 ```swift
 // Turn any generic type into a reference type using this Box class.
 final class Box<T> {
-  let value: T 
+  let value: T
   init(_ value: T) {
     self.value = value
   }
@@ -709,8 +709,8 @@ Extend object lifetime using the `[weak self]` and `guard let strongSelf = self 
 **Preferred**
 ```swift
 resource.request().onComplete { [weak self] response in
-  guard let strongSelf = self else { 
-    return 
+  guard let strongSelf = self else {
+    return
   }
   let model = strongSelf.updateModel(response)
   strongSelf.updateUI(model)
@@ -809,15 +809,14 @@ When coding with conditionals, the left-hand margin of the code should be the "g
 ```swift
 func computeFFT(context: Context?, inputData: InputData?) throws -> Frequencies {
 
-  guard let context = context else { 
-    throw FFTError.noContext 
+  guard let context = context else {
+    throw FFTError.noContext
   }
-  guard let inputData = inputData else { 
-    throw FFTError.noInputData 
+  guard let inputData = inputData else {
+    throw FFTError.noInputData
   }
-    
+
   // use context and input to compute the frequencies
-    
   return frequencies
 }
 ```
@@ -844,10 +843,10 @@ When multiple optionals are unwrapped either with `guard` or `if let`, minimize 
 
 **Preferred:**
 ```swift
-guard let number1 = number1, 
-      let number2 = number2, 
-      let number3 = number3 else { 
-  fatalError("impossible") 
+guard let number1 = number1,
+      let number2 = number2,
+      let number3 = number3 else {
+  fatalError("impossible")
 }
 // do something with numbers
 ```
@@ -920,14 +919,14 @@ let playerMark = (player == current ? "X" : "O")
 
 Where an Xcode project is involved, the organization should be set to `Westlake APC` and the Bundle Identifier set to `io.github.WestlakeAPC.ProjectName` where `ProjectName` is the name of the project.
 
-  ![Xcode Project settings](screens/project_settings.png)
-  
+![Xcode Project settings](screens/project_settings.png)
+
 ## Copyright Statement
 
 The following copyright statement should be included at the top of every source
 file:
 
-```swift 
+```swift
     /**
      * Copyright (c) 2017 Westlake APC
      *
@@ -940,6 +939,14 @@ file:
      *
      * The above copyright notice and this permission notice shall be included in
      * all copies or substantial portions of the Software.
+     *
+     * Notwithstanding the foregoing, you may not use, copy, modify, merge, publish, 
+     * distribute, sublicense, create a derivative work, and/or sell copies of the 
+     * Software in any work that is designed, intended, or marketed for pedagogical or 
+     * instructional purposes related to programming, coding, application development, 
+     * or information technology.  Permission for such use, copying, modification,
+     * merger, publication, distribution, sublicensing, creation of derivative works, 
+     * or sale is expressly withheld.
      *
      * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
      * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
